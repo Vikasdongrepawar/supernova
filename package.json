@@ -1,0 +1,35 @@
+{
+  "name": "supernova",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "client",
+    "services/*"
+  ],
+  "scripts": {
+    "auth": "npm run dev --workspace=services/auth",
+    "product": "npm run dev --workspace=services/product",
+    "cart": "npm run dev --workspace=services/cart",
+    "order": "npm run dev --workspace=services/order",
+    "payment": "npm run dev --workspace=services/payment",
+    "notification": "npm run dev --workspace=services/notification"
+  },
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.3.1",
+    "morgan": "^1.10.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
